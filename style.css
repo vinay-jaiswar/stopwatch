@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: aliceblue;
+  color: aliceblue;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin: 2rem 0;
+  font-family: 'Poetsen One', sans-serif;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+}
+
+.timer p {
+  padding: 1rem 3rem;
+  font-size: 5rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: aliceblue;
+  padding: 1.2rem 2.5rem;
+  margin: 1rem 2rem;
+  border-radius: 10px;
+  width: 12rem;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 4px solid #bbb;
+  cursor: pointer;
+  color: #555;
+  transition: all 0.5s ease-in;
+}
+
+button:hover {
+  border-bottom: 4px solid #4acfe0;
+}
+
+.buttons button[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.timestamps {
+  display: flex;
+  justify-content: center;
+  height: 30rem;
+  margin: 2rem 0;
+}
+
+ul {
+  background-color: aliceblue;
+  color: #444;
+  width: 30%;
+  border-radius: 4px;
+  padding: 0.7rem 0;
+
+  background-image: url(background.webp);
+}
+
+li {
+  list-style: none;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  text-align: center;
+  border-bottom: 1px solid #999;
+}
+
+@media only screen and (max-width: 767px) {
+  button {
+    width: 6rem;
+    font-size: 1rem;
+  }
+}
