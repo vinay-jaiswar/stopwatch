@@ -14,16 +14,14 @@ html {
 }
 
 body {
-  background-color: aliceblue;
-  color: aliceblue;
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  position: relative;
+  background-image: url(resources/desktop-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-h1 {
-  font-size: 4rem;
-  text-align: center;
-  margin: 2rem 0;
-  font-family: 'Poetsen One', sans-serif;
+main {
+  margin: 4rem 0;
 }
 
 .timer {
@@ -36,6 +34,7 @@ h1 {
   font-size: 5rem;
   margin: 1rem 0;
   border-radius: 5px;
+  color: #444;
 }
 
 .buttons {
@@ -44,26 +43,29 @@ h1 {
 }
 
 button {
-  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
   padding: 1.2rem 2.5rem;
   margin: 1rem 2rem;
-  border-radius: 10px;
   width: 12rem;
   text-transform: uppercase;
-  border: none;
-  border-bottom: 4px solid #bbb;
   cursor: pointer;
-  color: #555;
+  color: #444;
   transition: all 0.5s ease-in;
-}
+  font-weight: 600;
 
-button:hover {
-  border-bottom: 4px solid #4acfe0;
+  background: rgba(255, 255, 255, 0.43);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.6px);
+  -webkit-backdrop-filter: blur(5.6px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .buttons button[disabled] {
   opacity: 0.5;
   pointer-events: none;
+  cursor: not-allowed;
 }
 
 .timestamps {
@@ -74,26 +76,49 @@ button:hover {
 }
 
 ul {
-  background-color: aliceblue;
-  color: #444;
+  color: #333;
   width: 30%;
-  border-radius: 4px;
   padding: 0.7rem 0;
+  overflow-y: auto;
 
-  background-image: url(resources/background.webp);
+  background: rgba(255, 255, 255, 0.27);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 li {
   list-style: none;
   padding: 1rem 2rem;
   font-size: 2rem;
+
   text-align: center;
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.6);
 }
 
 @media only screen and (max-width: 767px) {
+  body {
+    background-image: url(resources/mobile-background.jpg);
+  }
+
+  main {
+    margin: 9rem 0;
+  }
+
   button {
-    width: 6rem;
-    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    width: 8rem;
+  }
+
+  .timestamps {
+    height: 50rem;
+  }
+
+  ul {
+    width: 80%;
   }
 }

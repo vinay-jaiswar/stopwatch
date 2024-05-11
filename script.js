@@ -36,9 +36,10 @@ function updateTimer() {
 }
 
 function pauseTimer() {
+  startButton.disabled = false;
   pauseButton.disabled = true;
   resetButton.disabled = false;
-  splitButton.disabled = false;
+  splitButton.disabled = true;
 
   clearInterval(timerInterval);
   elapsedTime = Date.now() - startTime;
