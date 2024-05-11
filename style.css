@@ -104,18 +104,18 @@ li {
   }
 
   main {
-    margin: 9rem 0;
+    margin: 1rem 0;
   }
 
   button {
     display: flex;
     justify-content: center;
-    margin: 1rem;
-    width: 8rem;
+    margin: 0.5rem;
+    width: 7rem;
   }
 
   .timestamps {
-    height: 50rem;
+    height: 45rem;
   }
 
   ul {
